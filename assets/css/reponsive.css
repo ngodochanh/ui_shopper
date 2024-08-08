@@ -1,0 +1,120 @@
+/* Tablet & mobile */
+@media (max-width: 63.9375em) {
+    .hide-one-tablet-mobile {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    .header-body {
+        padding: 10px 0;
+    }
+
+    .pseudo-class--bridge::before {
+        display: none;
+    }
+
+    .pseudo-class--triangle::after {
+        display: none;
+    }
+
+    .extension,
+    .header-find.extension {
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .header__moblie--find,
+    .header-body__cart {
+        width: 100px;
+    }
+
+    .header-body__cart_container {
+        margin: 0 0 0 auto;
+    }
+
+    .content {
+        margin-top: 61px;
+        padding-top: 0;
+    }
+
+    .footer__content--apps-dowload,
+    .footer__heading--item {
+        justify-content: center;
+    }
+
+    .footer__content--heading {
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media (min-width: 48em) and (max-width: 63.9375em){
+    .hide-one-tablet {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 47.9375em) {
+    .hide-one-mobile {
+        display: none;
+    }
+
+    .header-body {
+        padding: 6px 0;
+        overflow: hidden;
+    }
+
+    .header__moblie--find {
+        display: block;
+    }
+
+    .header-body__search {
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        z-index: 100;
+        height: 45px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        display: none;
+    }
+
+    #header__mobile-find:checked ~ .header-body__search {
+        display: flex;
+    }
+
+    .header-find.extension {
+        top: 106px;
+        box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    }
+
+    .header-body__cart_container {
+        margin: 0 auto;
+    }
+
+    .header-body__link--logo {
+        width: 150px;
+        text-align: center;
+    }
+
+    .header-body__logo--img {
+        height: 43.2px;
+    }
+
+    .paginate--item {
+        margin: 0;
+    }
+
+    .footer__heading--item {
+        justify-content: center;
+    }
+}

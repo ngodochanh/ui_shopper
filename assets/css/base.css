@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #ee4d2d;
+    --primary-border: 1px solid #e03d2a;
+
+    --text-color: #595959;
+    --while-color: #fff;
+    --black-color: #000;
+    --gold-color: #ffce3d;
+
+    --first-color: rgba(0, 0, 0, 0.05);
+    --second-color: #b3b3b3;
+    --third-color: #838383;
+    --fourth-color: #ededed;
+
+    --hover-color: #f9f7f7;
+    --hover-primary-color: #26aa99;
+    
+    --border-second: 1px solid rgba(0, 0, 0, 0.05);
+    --border-first: 1px solid #bdbdbd;
+
+    --background-color: #f5f5f5;
+}
+
+.pb-48 {
+    padding-bottom: 48px !important;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal__container {
+    margin: auto;
+    animation: growth linear 0.2s;
+}
+
+/* Btn */
+.btn {
+    background-color: var(--while-color);
+    border: none;
+    font-size: 1.5rem;
+    padding: 8px 22px;
+    color: var(--black-color);
+    cursor: pointer;
+    border-radius: 2px;
+
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn + .btn {
+    margin-left: 8px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn.disabled {
+    opacity: 0.6 !important;
+    cursor: default !important;
+    color: currentColor !important;
+}
+
+/* Pseudo class */
+.pseudo-class--triangle::after {    /* Làm cầu nối hình tam giác */
+    content: "";
+    display: block;
+    border-style: solid;
+    border-color: transparent transparent var(--while-color) transparent;
+    border-width: 10px 14px;
+    position: absolute;
+
+    top: -19px;
+}  
+
+.pseudo-class--seperate::before {   /* Làm vạch phân cách */
+    content: "";
+    display: block;
+    width: 1px;
+    transform: translateY(-50%);
+
+    position: absolute;
+    height: 16px;
+    top: 50%;
+    right: -9px;
+    background-color: #fafafa;
+
+}
+
+.pseudo-class--bridge::before { /* Làm cầu nối khi hover */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: -2px;
+}
+
+.extension {    /* Để làm phần tử con khi hover vào  */
+    background-color: var(--while-color);
+    display: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    top: 100%;
+    right: 0;
+    transform-origin: calc(100% - 25%) top;
+    animation: growth ease-in-out 0.3s;
+    min-width: 100px;
+}
+
+/* Paginate */
+.paginate {
+    display: flex;
+    justify-content: center;
+}
+
+.paginate--item {
+    padding: 4px 16px;
+    margin: 0 8px;
+    background-color: transparent;
+}
+
+.paginate--item:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.paginate--item-active,
+.paginate--item-active:hover {
+    background-color: var(--primary-color);
+    color: var(--while-color);
+}
+
+.paginate--item-active:hover {
+    opacity: 0.7;
+}
